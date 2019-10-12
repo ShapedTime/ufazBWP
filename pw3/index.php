@@ -47,28 +47,32 @@
     <h1>Objective N2: HTML displayed results</h1>
     <h2>HTML table to display the results</h2>
         <table class="trig-table" id="myTable">
-            <tr>
-                <th>Date of course</th>
-                <th>Starting Time</th>
-                <th>Ending Time</th>
-                <th>Course duration</th>
-                <th>Class name</th>
-                <th>Subject name</th>
-                <th>Professor name</th>
-            </tr>
-        <?
-            while($res=mysqli_fetch_assoc($procquery)){
-                echo "<tr>";
-                echo "<td>".$res["course_date"]."</td>";
-                echo "<td>".$res["start_time"]."</td>";
-                echo "<td>".$res["end_time"]."</td>";
-                echo "<td>".$res["course_duration"]."</td>";
-                echo "<td>".$res["class_full_name"]."</td>";
-                echo "<td>".$res["subject"]."</td>";
-                echo "<td>".$res["first_name"]." ".$res["last_name"]."</td>";
-                echo "</tr>";
-            }
-        ?>
+            <thead>
+                <tr>
+                    <th>Date of course</th>
+                    <th>Starting Time</th>
+                    <th>Ending Time</th>
+                    <th>Course duration</th>
+                    <th>Class name</th>
+                    <th>Subject name</th>
+                    <th>Professor name</th>
+                </tr>
+            </thead>
+            <tbody>
+            <?
+                while($res=mysqli_fetch_assoc($procquery)){
+                    echo "<tr>";
+                    echo "<td>".$res["course_date"]."</td>";
+                    echo "<td>".$res["start_time"]."</td>";
+                    echo "<td>".$res["end_time"]."</td>";
+                    echo "<td>".$res["course_duration"]."</td>";
+                    echo "<td>".$res["class_full_name"]."</td>";
+                    echo "<td>".$res["subject"]."</td>";
+                    echo "<td>".$res["first_name"]." ".$res["last_name"]."</td>";
+                    echo "</tr>";
+                }
+            ?>
+            </tbody>
         </table>
 
 </body>
