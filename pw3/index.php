@@ -4,6 +4,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PW3: Student Timetable</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/jq-3.3.1/dt-1.10.20/datatables.min.js"></script>
     <style>
         .trig-table{
             border: 1px solid black;
@@ -18,6 +20,11 @@
             border-collapse: collapse;
         }
     </style>
+    <script>
+        $(document).ready( function () {
+            $('.trig-table').first().DataTable();
+        } );
+    </script>
 </head>
 <body>
     <h1>Objective N1: PHP mysqli queries</h1>
@@ -38,6 +45,7 @@
         echo "Number of rows for the query is: ".mysqli_num_rows($procquery);
     ?>
     <h1>Objective N2: HTML displayed results</h1>
+    <h2>HTML table to display the results</h2>
         <table class="trig-table">
             <tr>
                 <th>Date of course</th>
@@ -62,7 +70,6 @@
             }
         ?>
         </table>
-    <h2>HTML table to display the results</h2>
 
 </body>
 </html>
