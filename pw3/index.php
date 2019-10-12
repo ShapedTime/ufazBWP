@@ -15,6 +15,15 @@
         $pass="teymurufaz";
         $db="teymurufaz_bwp";
         $conn=mysqli_connect($host, $user, $pass, $db) or die("Failed to connect to database");
+        mysqli_set_charset($conn, "utf8");
+    ?>
+    <h2>Student timetable query</h2>
+    <?
+        $query="SELECT * FROM catalog";
+        $procquery = mysqli_query($conn, $query) or die("Error in fetching query");
+        echo "Number of rows for the query is: ".mysqli_num_rows($procquery);
+        
+
     ?>
 </body>
 </html>
