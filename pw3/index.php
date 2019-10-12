@@ -4,6 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PW3: Student Timetable</title>
+    <style>
+        .trig-table{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .trig-table th{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .trig-table td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
     <h1>Objective N1: PHP mysqli queries</h1>
@@ -24,7 +38,7 @@
         echo "Number of rows for the query is: ".mysqli_num_rows($procquery);
     ?>
     <h1>Objective N2: HTML displayed results</h1>
-        <table>
+        <table class="trig-table">
             <tr>
                 <th>Date of course</th>
                 <th>Starting Time</th>
