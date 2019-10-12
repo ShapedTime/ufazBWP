@@ -22,7 +22,7 @@
     </style>
     <script>
         $(document).ready( function () {
-            $('.trig-table').first().DataTable();
+            $('#myTable').DataTable();
         } );
     </script>
 </head>
@@ -46,7 +46,7 @@
     ?>
     <h1>Objective N2: HTML displayed results</h1>
     <h2>HTML table to display the results</h2>
-        <table class="trig-table">
+        <table class="trig-table" id="myTable">
             <tr>
                 <th>Date of course</th>
                 <th>Starting Time</th>
