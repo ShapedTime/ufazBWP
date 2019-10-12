@@ -19,7 +19,7 @@
     ?>
     <h2>Student timetable query</h2>
     <?
-        $query="SELECT classes.class_full_name, subjects.subject, professors.first_name, professors.last_name FROM courses WHERE courses.class_id = classes.class_id AND courses.subject_id = subjects.subject_id AND courses.professor_id = professors.professor_id";
+        $query="SELECT classes.class_full_name, subjects.subject, professors.first_name, professors.last_name FROM courses, classes, subjects, professors WHERE courses.class_id = classes.class_id AND courses.subject_id = subjects.subject_id AND courses.professor_id = professors.professor_id";
         $procquery = mysqli_query($conn, $query) or die("Error in fetching query");
         echo "Number of rows for the query is: ".mysqli_num_rows($procquery);
     ?>
