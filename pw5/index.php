@@ -66,9 +66,10 @@
         if($procquery->num_rows == 0){
             $datagen = fopen("./datagen.csv", "r");
             $d=fgetcsv($datagen, 1000, ';');
+            $stmt = $conn->prepare("INSERT INTO customers (customer_id, customerTitle, customerLastname, customerFirstname, customerStreetAddress, customerStreetAddress2, customerZipCode, customerCity, customerPhone, customerEmail, customerRegisterDate) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $stmt->bind_param("isssssssss", $d[0], $d[1], $d[2], $d[3], $d[4], $d[5], $d[6], $d[7], $d[8], $d[9], $d[10]);
             while($d=fgetcsv($datagen, 1000, ';')){
-                $query = "INSERT INTO customers (customer_id, customerTitle, customerLastname, customerFirstname, customerStreetAddress, customerStreetAddress2, customerZipCode, customerCity, customerPhone, customerEmail, customerRegisterDate) VALUES ($d[0], $d[1], $d[2], $d[3], $d[4], $d[5], $d[6], $d[7], $d[8], $d[9], $d[10])";
-                $procquery = $conn->query($query);
+                $stmt->execute();
             }
         }
     ?>
