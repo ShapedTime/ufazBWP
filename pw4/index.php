@@ -8,9 +8,10 @@
 </head>
 <body>
     <form>
-        <input type="radio" name="title" value="mr" checked>Mr.</input>
+        <p>Title: </p>
+        <input type="radio" name="title" value="mr" checked>Mr.</input><br>
         <input type="radio" name="title" value="mrs" checked>Mrs.</input>
-        
+
     </form>
 </body>
 </html>
