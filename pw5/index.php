@@ -63,7 +63,7 @@
     <?
         $query = "SELECT * FROM customers";
         $procquery = $conn->query($query);
-        if($procquery->num_rows = 0){
+        if($procquery->num_rows == 0){
             $datagen = fopen("./datagen.csv", "r");
             $d=fgetcsv($datagen, 1000, ';');
             while($d=fgetcsv($datagen, 1000, ';')){
