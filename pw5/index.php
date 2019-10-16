@@ -48,7 +48,7 @@
             </thead>
             <tbody>
             <?
-                while($res=$procquery->fetch_assoc){
+                while($res=$procquery->fetch_assoc()){
                     echo "<tr>";
                     echo "<td>".$res["course_date"]."</td>";
                     echo "<td>".$res["start_time"]."</td>";
