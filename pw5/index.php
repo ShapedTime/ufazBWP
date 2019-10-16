@@ -21,14 +21,16 @@
         $user="169542";
         $pass="teymurufaz";
         $db="teymurufaz_bwp";
-        $conn=mysqli_connect($host, $user, $pass, $db) or die("Failed to connect to database");
-        mysqli_set_charset($conn, "utf8");
+        $conn=new mysqli($host, $user, $pass, $db);
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        } 
     ?>
     <h2>Student timetable query</h2>
     <?
         $query="SELECT classes.class_full_name, subjects.subject, professors.first_name, professors.last_name, courses.course_date, courses.start_time, courses.end_time, courses.course_duration FROM courses, classes, subjects, professors WHERE courses.class_id = classes.class_id AND courses.subject_id = subjects.subject_id AND courses.professor_id = professors.professor_id";
-        $procquery = mysqli_query($conn, $query) or die("Error in fetching query");
-        echo "Number of rows for the query is: ".mysqli_num_rows($procquery);
+        $procquery = $conn->query($query);
+        echo "Number of rows for the query is: ".$procquery->num_rows;
     ?>
     <h1>Objective N2: HTML displayed results</h1>
     <h2>HTML table to display the results</h2>
@@ -46,7 +48,7 @@
             </thead>
             <tbody>
             <?
-                while($res=mysqli_fetch_assoc($procquery)){
+                while($res=$procquery->fetch_assoc){
                     echo "<tr>";
                     echo "<td>".$res["course_date"]."</td>";
                     echo "<td>".$res["start_time"]."</td>";
