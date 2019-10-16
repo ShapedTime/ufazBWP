@@ -11,7 +11,9 @@
         <p>Title: </p>
         <input type="radio" name="title" value="mr" checked>Mr.</input><br>
         <input type="radio" name="title" value="mrs" checked>Mrs.</input>
-
+        <p>Name</p>
+        <input type="text" name="first_name" placeholder="First Name">
+        <input type="text" name="last_name" placeholder="Last Name">
     </form>
 </body>
 </html>
