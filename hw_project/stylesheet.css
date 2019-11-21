@@ -1,10 +1,74 @@
-header {
+body{
+    min-width: 100%;
+    min-height: 100vh;
+}
+html{
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+.content {
     background-image: url("./michael-longmire-lhltMGdohc8-unsplash.jpg");
     padding: 1%;
     background-size: cover;
     background-repeat: no-repeat;
+    min-width: 100%;
+    min-height: 100%;
+    min-height: 100vh;
 }
 
-header section {
+.content section {
     padding: 3%;
+    padding-right: 5%;
+    padding-left: 10%;
+    font-family: 'Baskervville', serif;
+    font-size: larger;
+    line-height: 200%;
 }
+
+.nav-link {
+    text-decoration: none;
+    line-height: 1;
+    
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    padding: 10px 10px;
+    margin: 5px 10px;
+    overflow: hidden;
+    color: #333;
+    vertical-align: bottom;
+    transition: color .3s ease-out;
+ }
+
+ .nav-link::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    transform: translateY(calc(100% - 2px));
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(60deg, #64b3f4 0%, #c2e59c 100%);
+    transition: transform .25s ease-out;
+ }
+
+ .nav-link:hover { 
+    color: #fff; 
+ }
+ .nav-link:hover::before {
+    transform: translateY(0);
+    transition: transform .25s ease-out;
+ }
+
+ nav > a {
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 1px;
+ }
+
+ footer{
+     padding: 5%;
+     padding-bottom: 2%;
+ }
