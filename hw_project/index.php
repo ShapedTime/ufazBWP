@@ -23,12 +23,12 @@
                 <button type="button" class="btn btn-success">Sign In</button>
             </div>
         </nav>
-        <div>
+        <section>
             See your balance with us<br>
                 -> Check where you spend your money the most<br>
                 -> Do not waste your money<br>
                 -> Avoid being broke at the end of month<br>
-        </div>
+        </section>
     </header>
     
     <footer></footer>
