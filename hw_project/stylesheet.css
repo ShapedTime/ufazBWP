@@ -2,4 +2,5 @@ header {
     background-image: url("./michael-longmire-lhltMGdohc8-unsplash.jpg");
     padding: 1%;
     background-size: contain;
+    background-repeat: no-repeat;
 }
