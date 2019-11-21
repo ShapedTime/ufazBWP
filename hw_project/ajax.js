@@ -1,7 +1,7 @@
 $(document).ready(function () {
     $.ajax({
         type: "post",
-        url: "ajax.php",
+        url: "./ajax.php",
         data: "signin-button",
         // dataType: "dataType",
         success: function (response) {
