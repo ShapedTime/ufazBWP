@@ -19,9 +19,18 @@
     <header>
         <nav>
             <i class="fas fa-money-check fa-7x"></i>
+            <div class="float-right">
+                <button type="button" class="btn btn-succes">Sign In</button>
+            </div>
         </nav>
+        <div>
+            See your balance with us
+                -> Check where you spend your money the most
+                -> Do not waste your money
+                -> Avoid being broke at the end of month
+        </div>
     </header>
-
+    
     <footer></footer>
 </body>
 </html>
