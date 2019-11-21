@@ -2,6 +2,10 @@
     session_start();
 
     if(isset($_REQUEST["signin-button"])){
-        echo "Hello";
+        if(isset($_SESSION["username"])){
+            echo $_SESSION["user-first-name"]." ".$_SESSION["user-last-name"];
+        }else{
+            echo "";
+        }
     }
 ?>
