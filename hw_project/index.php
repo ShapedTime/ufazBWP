@@ -18,7 +18,7 @@
 <body>
     <header>
         <nav>
-            <i class="fas fa-money-check"></i>
+            <i class="fas fa-money-check fa-7x"></i>
         </nav>
     </header>
 
