@@ -9,8 +9,9 @@
             // password_verify ( string $password , string $hash ) : bool
             if($stmt = $conn->prepare('SELECT `id`, `first_name`, `last_name`, `password` FROM `users` WHERE `email` = ?')){
                 $stmt->bind_param('s', $_REQUEST["email"]);
-                $result = $stmt->execute();
+                $stmt->execute();
                 $stmt->store_result();
+                $result = $stmt->get_result();
                 if($stmt->num_rows > 0){
                     $data = $result->fetch_assoc();
                     if(password_verify($_POST["password"], $data["password"])){
