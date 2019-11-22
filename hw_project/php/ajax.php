@@ -14,14 +14,13 @@
                 $stmt->bind_result($id, $first_name, $last_name, $email, $password);
                 if($stmt->num_rows > 0){
                     $stmt->fetch();
-                    echo "post: ".$_POST["password"]."  data: ".$password;
                     if(password_verify($_POST["password"], $password)){
                         echo 1;
                     }else{
-                        echo "Wrong pass!";
+                        echo 0;
                     }
                 }else{
-                    echo "No records";
+                    echo -1;
                 }
             }
         }
