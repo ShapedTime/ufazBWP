@@ -1,7 +1,7 @@
 <?php
     session_start();
     include_once "mysqli_config.php";
-    if (isset($_REQUEST["email"]) && isset($_REQUEST["password"])) {        
+    if (isset($_POST["email"]) && isset($_POST["password"])) {        
         $email = mysqli_real_escape_string($conn,$_POST['email']);
         $password = mysqli_real_escape_string($conn,$_POST['password']);
         if($email != "" && $password != ""){
