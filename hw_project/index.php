@@ -56,7 +56,7 @@
                                         </div>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" class="btn btn-success" >Sign In</button>
+                                        <button type="button" class="btn btn-success" id="signin-button">Sign In</button>
                                         <button type="button" class="btn btn-primary">Register</button>
                                     </div>
                                 </form>
