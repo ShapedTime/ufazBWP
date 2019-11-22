@@ -7,6 +7,8 @@
                 $stmt->bind_param('ssss', $_POST["first-name"], $_POST["last-name"], $_POST["email"], $pass);
                 $stmt->execute();
                 // TODO: redirect to another page
+            }else{
+                die("Something went wrong!");
             }
         }else{
             die("Empty fields exist!");
