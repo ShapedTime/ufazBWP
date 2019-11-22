@@ -6,7 +6,7 @@ $(document).ready(function () {
         if(email != "" && password != ""){
             $.ajax({
                 type: "post",
-                url: "./ajax.php",
+                url: "http://teymurufaz.alwaysdata.net/BWP/hw_project/ajax.php",
                 data: {email:email, password:password},
                 success: function (response) {
                     if(response == 1){
