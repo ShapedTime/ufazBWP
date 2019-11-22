@@ -11,4 +11,24 @@
         }
         echo 0;
     }
+    if(isset($_REQUEST["issignedup"])){
+        if($_SESSION["id"]){
+            echo 1;
+        }
+    }
+    if(isset($_REQUEST["uniqueemail"])){
+        if(!empty($_REQUEST["uniqueemail"])){
+            if($stmt = $conn->prepare('SELECT id FROM users WHERE email = ?')){
+                $stmt->bindparam('s', $_REQUEST["uniqueemail"]);
+                $stmt->execute();
+                $stmt->store_result();
+
+                if($stmt->num_rows >0) echo 0;
+                else echo 1;
+                $stmt->close();
+            }else{
+                echo -1;
+            }
+        }
+    }
 ?>
