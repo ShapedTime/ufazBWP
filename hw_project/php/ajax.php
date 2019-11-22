@@ -9,12 +9,13 @@
             // password_verify ( string $password , string $hash ) : bool
             if($stmt = $conn->prepare('SELECT * FROM `users` WHERE `email` = ?')){
                 $stmt->bind_param('s', $_REQUEST["email"]);
-                $result = $stmt->execute();
+                $stmt->execute();
                 $stmt->store_result();
+                $stmt->bind_result($id, $first_name, $last_name, $email, $password);
                 if($stmt->num_rows > 0){
-                    $data = $stmt->fetch();
-                    echo "post: ".$_POST["password"]."  data: ".$data;
-                    if(password_verify($_POST["password"], $data["password"])){
+                    $stmt->fetch();
+                    echo "post: ".$_POST["password"]."  data: ".$password;
+                    if(password_verify($_POST["password"], $password)){
                         echo 1;
                     }else{
                         echo "Wrong pass!";
