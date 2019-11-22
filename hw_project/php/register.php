@@ -4,7 +4,7 @@
         if(!empty($_POST["first-name"]) && !empty($_POST["last-name"]) && !empty($_POST["email"]) && !empty($_POST["password"])){
             if ($stmt = $con->prepare('INSERT INTO users (first_name, last_name, email, pass) VALUES (?, ?, ?, ?)')) {
                 $pass = password_hash($_POST["password"], PASSWORD_DEFAULT);
-                $stmt->bindparam('ssss', $_POST["first-name"], $_POST["last-name"], $_POST["email"], $pass);
+                $stmt->bind_param('ssss', $_POST["first-name"], $_POST["last-name"], $_POST["email"], $pass);
                 $stmt->execute();
                 // TODO: redirect to another page
             }
