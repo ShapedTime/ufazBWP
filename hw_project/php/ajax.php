@@ -19,7 +19,7 @@
     if(isset($_REQUEST["uniqueemail"])){
         if(!empty($_REQUEST["uniqueemail"])){
             if($stmt = $conn->prepare('SELECT `id` FROM `users` WHERE `email` = ?')){
-                $stmt->bindparam('s', $_REQUEST["uniqueemail"]);
+                $stmt->bind_param('s', $_REQUEST["uniqueemail"]);
                 $stmt->execute();
                 $stmt->store_result();
 
