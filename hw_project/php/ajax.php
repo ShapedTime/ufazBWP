@@ -16,10 +16,10 @@
                     if(password_verify($_POST["password"], $data["password"])){
                         echo 1;
                     }else{
-                        echo 0;
+                        echo "Wrong pass!";
                     }
                 }else{
-                    echo 0;
+                    echo "No records";
                 }
             }
         }
