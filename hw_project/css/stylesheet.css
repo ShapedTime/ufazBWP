@@ -8,7 +8,7 @@ html{
 }
 
 .content {
-    background-image: url("./michael-longmire-lhltMGdohc8-unsplash.jpg");
+    background-image: url("../res/michael-longmire-lhltMGdohc8-unsplash.jpg");
     padding: 1%;
     background-size: cover;
     background-repeat: no-repeat;
