@@ -7,7 +7,21 @@
         if($email != "" && $password != ""){
             //TODO: verify that user exists and compare pass with 
             // password_verify ( string $password , string $hash ) : bool
-            // https://www.amitmerchant.com/inbuilt-password-hashing-verification-php/
+            if($stmt = $conn->prepare('SELECT `id`, `first_name`, `last_name`, `password` FROM `users` WHERE `email` = ?')){
+                $stmt->bind_param('s', $_REQUEST["email"]);
+                $stmt->execute();
+                $stmt->store_result();
+                if($stmt->num_rows > 0){
+                    $data = $stmt->fetch_assoc();
+                    if(password_verify($_POST["password"], $data["password"])){
+                        echo 1;
+                    }else{
+                        echo 0;
+                    }
+                }else{
+                    echo 0;
+                }
+            }
         }
         echo 0;
     }
