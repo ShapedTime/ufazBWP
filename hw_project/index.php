@@ -1,5 +1,8 @@
 <?
     session_start();
+    if(isset($_SESSION['id'])){
+        // TODO: redirect
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,9 +29,49 @@
                     <a class="nav-link">About</a>
                     <a class="nav-link">Pricing</a>
                     <a class="nav-link">Contact</a>
-                    <span id="sign-in-ajax">
-                        
-                    </span>
+                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modalSignIn">Sign In</button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <form>
+                                    <div class="modal-header">
+                                            <h5 class="modal-title">Sign In</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="container-fluid">
+                                                <div class="form-group">
+                                                    <label for="emailSignIn">Email address</label>
+                                                    <input type="email" class="form-control" id="emailSignIn" aria-describedby="emailHelp" placeholder="Enter email">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="passwordSignIn">Password</label>
+                                                    <input type="password" class="form-control" id="passwordSignIn" placeholder="Password">
+                                                </div>
+                                                <small id="signin-msg" class="form-text text-muted text-danger"></small>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success" >Sign In</button>
+                                        <button type="button" class="btn btn-primary">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        $('#modalSignIn').on('show.bs.modal', event => {
+                            var button = $(event.relatedTarget);
+                            var modal = $(this);
+                            // Use above variables to manipulate the DOM
+                            
+                        });
+                    </script>
                 </div>
             </nav>
         </header>

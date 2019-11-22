@@ -1,19 +1,25 @@
 $(document).ready(function () {
-    $.ajax({
-        type: "post",
-        url: "./ajax.php",
-        data: "signin-button",
-        // dataType: "dataType",
-        success: function (response) {
-            if(response==""){
-                $("#sign-in-ajax").html('<button type="button" class="btn btn-success">Sign In</button>');
-            }
-            else{
-                $("#sign-in-ajax").html('<button type="button" class="btn btn-success">'+response+'</button>');
-            }
-        },
-        error: function (jqXhr, textStatus, errorMessage) {
-            $("#sign-in-ajax").html('<button type="button" class="btn btn-success">Sign In</button>');
+    $("#signin-button").click(function (e) { 
+        e.preventDefault();
+        var email = $("#emailSignIn").val().trim();
+        var password = $("#passwordSignIn").val().trim();
+        if(email != "" && password != ""){
+            $.ajax({
+                type: "post",
+                url: "./ajax.php",
+                data: {email:email, password:password},
+                success: function (response) {
+                    if(response == 1){
+                        // window.location = "home.php"
+                    }else{
+                        $("#signin-msg").text("Invalid email or password");
+                    }
+                },
+                error: function (jqXhr, textStatus, errorMessage) {
+                    $("#signin-msg").text("Something went wrong. Please try again later!");
+                }
+            });
         }
+    
     });
 });
