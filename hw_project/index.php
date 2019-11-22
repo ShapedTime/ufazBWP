@@ -52,7 +52,7 @@
                                                     <label for="passwordSignIn">Password</label>
                                                     <input type="password" class="form-control" id="passwordSignIn" placeholder="Password">
                                                 </div>
-                                                <small id="signin-msg" class="form-text text-muted"></small>
+                                                <small id="signin-msg" class="form-text text-danger"></small>
                                         </div>
                                     </div>
                                     <div class="modal-footer">
