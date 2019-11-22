@@ -13,8 +13,9 @@
                 $stmt->store_result();
                 if($stmt->num_rows > 0){
                     $data = $stmt->fetch();
+                    echo "post: ".$_POST["password"]."  data: ".$data["password"];
                     if(password_verify($_POST["password"], $data["password"])){
-                        echo "post: ".$_POST["password"]."  data: ".$data["password"];
+                        echo 1;
                     }else{
                         echo "Wrong pass!";
                     }
