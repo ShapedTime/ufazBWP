@@ -65,11 +65,11 @@ $(document).ready(function () {
                     }else if(response == 0){
                         $("#register-msg").text("This email is already taken!");
                     }else{
-                        $("#register-msg").text("Something went wrong. Please try again later!");
+                        $("#register-msg").text("Something went wrong. Please try again later!-1");
                     }
                 },
                 error: function (jqXhr, textStatus, errorMessage) {
-                    $("#register-msg").text("Something went wrong. Please try again later!");
+                    $("#register-msg").text("Something went wrong. Please try again later!noconn");
                 }
             });
         }
