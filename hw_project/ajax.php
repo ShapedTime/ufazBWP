@@ -2,8 +2,8 @@
     session_start();
     include_once "mysqli_config.php";
     if (isset($_REQUEST["email"]) && isset($_REQUEST["password"])) {        
-        $email = mysqli_real_escape_string($con,$_POST['email']);
-        $password = mysqli_real_escape_string($con,$_POST['password']);
+        $email = mysqli_real_escape_string($conn,$_POST['email']);
+        $password = mysqli_real_escape_string($conn,$_POST['password']);
         if($email != "" && $password != ""){
             //TODO: verify that user exists and compare pass with 
             // password_verify ( string $password , string $hash ) : bool
