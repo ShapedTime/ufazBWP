@@ -117,4 +117,11 @@ $(document).ready(function () {
         }
     });
 
+    $("emailSignIn").keypress(function (e) { 
+        $("#signin-msg").text("");
+    });
+    $("passwordSignIn").keypress(function (e) { 
+        $("#signin-msg").text("");
+    });
+
 });
