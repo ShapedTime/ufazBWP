@@ -76,7 +76,7 @@ $(document).ready(function () {
     });
 
     // Register Validity Checks
-    $("#registerFirstName").keypress(function (e) { 
+    $("#registerFirstName").on('input', function (e) { 
         var firstname = $("#registerFirstName").val().trim();
         if(firstname == ""){
             $("#registerFirstName").addClass("is-invalid");
@@ -86,7 +86,7 @@ $(document).ready(function () {
             $("#registerFirstName").removeClass("is-invalid");
         }
     });
-    $("#registerLastName").keypress(function (e) { 
+    $("#registerLastName").on('input', function (e) { 
         var lastname = $("#registerLastName").val().trim();
         if(lastname == ""){
             $("#registerLastName").addClass("is-invalid");
@@ -96,7 +96,7 @@ $(document).ready(function () {
             $("#registerLastName").removeClass("is-invalid");
         }
     });
-    $("#registerEmail").keypress(function (e) { 
+    $("#registerEmail").on('input', function (e) { 
         var email = $("#registerEmail").val().trim();
         if(email == ""){
             $("#registerEmail").addClass("is-invalid");
@@ -106,7 +106,7 @@ $(document).ready(function () {
             $("#registerEmail").removeClass("is-invalid");
         }
     });
-    $("#registerPass").keypress(function (e) { 
+    $("#registerPass").on('input', function (e) { 
         var password = $("#registerPass").val().trim();
         if(password == ""){
             $("#registerPass").addClass("is-invalid");
@@ -117,10 +117,10 @@ $(document).ready(function () {
         }
     });
 
-    $("emailSignIn").keypress(function (e) { 
+    $("#emailSignIn").on('input', function (e) { 
         $("#signin-msg").text("");
     });
-    $("passwordSignIn").keypress(function (e) { 
+    $("#passwordSignIn").on('input', function (e) { 
         $("#signin-msg").text("");
     });
 
