@@ -1,5 +1,6 @@
 <?php
     session_start();
+    header("Access-Control-Allow-Origin: *");
     include_once "mysqli_config.php";
     if (isset($_POST["email"]) && isset($_POST["password"])) {        
         $email = mysqli_real_escape_string($conn,$_POST['email']);
