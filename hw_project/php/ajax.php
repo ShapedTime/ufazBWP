@@ -6,8 +6,6 @@
         $email = mysqli_real_escape_string($conn,$_POST['email']);
         $password = mysqli_real_escape_string($conn,$_POST['password']);
         if($email != "" && $password != ""){
-            //TODO: verify that user exists and compare pass with 
-            // password_verify ( string $password , string $hash ) : bool
             if($stmt = $conn->prepare('SELECT * FROM `users` WHERE `email` = ?')){
                 $stmt->bind_param('s', $_REQUEST["email"]);
                 $stmt->execute();
@@ -46,4 +44,6 @@
             }
         }
     }
+    
+
 ?>
