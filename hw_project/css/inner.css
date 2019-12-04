@@ -21,17 +21,13 @@ body{
     flex-direction: column;
 }
 
-.home-body{
-    background: rgb(97,97,97);
-    background: linear-gradient(149deg, rgba(97,97,97,1) 0%, rgba(117,117,136,1) 35%, rgba(165,240,255,1) 100%); 
-    background-attachment: fixed;
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
 }
 
-.b-t{
-    flex: 6 7;
-    max-height: 100vh;
-    padding: 2vh 2vw;
-}
 
 nav{
     flex: 1 1;
@@ -49,36 +45,69 @@ nav{
 }
 
 .nav-links-container{
-    padding: 1vh 1vw;
+    padding: 4vh 0;
 }
 
 .nav-links-container > a{
     text-decoration: none;
     font-size: 1.3em;
-    color: #8ea8ff;
-    margin: 0.5vh 0;
+    color: #B9C1CF;
+    height: 24vw;
+}
+
+.current-nav-link{
+    color: #50667B !important;
+    background-color: #F4F5FA;
+    cursor: default;
 }
 
 .nav-links-container > a:hover{
     color: #597ffd;
 }
 
-object{
-    max-width: 10vw;
-    height: auto;
+
+.b-t{
+    flex: 5 5;
+    max-height: 100vh;
+    padding: 2vh 2vw;
+}
+
+.b-t-method-icon{
+    color: #4F667C;
+}
+
+
+.b-t-name{
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.b-t-blnc{
+    color: #707070;
+    font-size: 0.9em;
 }
 
 .b-t-header{
     align-items: center;
 }
 .b-t-collapse{
-    width: 2vw;
     margin: 0 8vw !important;
     margin-left: auto !important;
+    color: #50667B;
+    cursor: pointer;
+    transition: 0.3s;
 }
 .b-t-add-trnsctn{
     float: right;
-    width: 2vw;
+    margin-left: auto;
+    color: #50667B;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.b-t-collapse:hover, .b-t-add-trnsctn:hover{
+    color: #597ffd;
 }
 
 .b-t-header > *{
@@ -91,5 +120,9 @@ table{
     border-collapse: collapse;
 }
 .b-t-table-expense{
-    color: rgb(58, 11, 11);
+    color: rgb(223, 99, 99);
+}
+
+.b-t-table-income{
+    color: rgb(106, 185, 82);
 }

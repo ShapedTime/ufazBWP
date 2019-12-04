@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?7to64z');
+  src:  url('fonts/icomoon.eot?7to64z#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?7to64z') format('truetype'),
+    url('fonts/icomoon.woff?7to64z') format('woff'),
+    url('fonts/icomoon.svg?7to64z#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bank-account:before {
+  content: "\e900";
+}
+.icon-cash:before {
+  content: "\e901";
+}
+.icon-credit-card:before {
+  content: "\e902";
+}
+.icon-credit-cards:before {
+  content: "\e903";
+}
+.icon-document:before {
+  content: "\e904";
+}
+.icon-down-arrow:before {
+  content: "\e905";
+}
+.icon-ewallet:before {
+  content: "\e906";
+}
+.icon-home:before {
+  content: "\e907";
+}
+.icon-plus:before {
+  content: "\e908";
+}
+.icon-statistics:before {
+  content: "\e909";
+}
+.icon-wallet:before {
+  content: "\e90a";
+}
+
+.x2:before{
+  font-size: 2em;
+}
+
+.x3:before{
+  font-size: 3em;
+}
+
+.x4:before{
+  font-size: 4em;
+}
+
+.x5:before{
+  font-size: 5em;
+}
+
+.x6:before{
+  font-size: 6em;
+}
+
+.x7:before{
+  font-size: 7em;
+}

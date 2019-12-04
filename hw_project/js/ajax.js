@@ -2,7 +2,7 @@ $(document).ready(function () {
     // Check if user has been SESSION
     $.ajax({
         type: "get",
-        url: "http://teymurufaz.alwaysdata.net/BWP/hw_project/php/ajax.php",
+        url: "../php/ajax.php",
         data: "issignedup",
         success: function (response) {
             if(response == 1){
@@ -19,7 +19,7 @@ $(document).ready(function () {
         if(email != "" && password != ""){
             $.ajax({
                 type: "post",
-                url: "http://teymurufaz.alwaysdata.net/BWP/hw_project/php/ajax.php",
+                url: "../php/ajax.php",
                 data: {email:email, password:password},
                 success: function (response) {
                     if(response == 1){
@@ -47,13 +47,13 @@ $(document).ready(function () {
         if(firstname != "" && lastname != "" && email != "" && password != ""){
             $.ajax({
                 type: "post",
-                url: "http://teymurufaz.alwaysdata.net/BWP/hw_project/php/ajax.php",
+                url: "../php/ajax.php",
                 data: {uniqueemail:email},
                 success: function (response) {
                     if(response == 1){
                         $.ajax({
                             type: "post",
-                            url: "http://teymurufaz.alwaysdata.net/BWP/hw_project/php/register.php",
+                            url: "../php/register.php",
                             data: {firstname:firstname, lastname:lastname, email:email, password:password},
                             success: function (response) {
                                 // TODO: window.location = "home.php"

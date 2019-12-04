@@ -49,6 +49,23 @@ $(function () {
     $("#passwordSignIn").on('input', function (e) { 
         $("#signin-msg").text("");
     });
+
+    $.ajax({
+        type: "get",
+        url: "../res/svg/document.svg",
+        data: "",
+        dataType: "image/svg+xml",
+        success: function (response) {
+            $(".bank-account-icon").append(response);
+            console.log("Works:")
+            console.log(response);
+        },
+        error: function (jqXhr, textStatus, errorMessage) {
+            console.log(jqXhr);
+            console.log(textStatus);
+            console.log(errorMessage);
+        }
+    });
     $(function () {
         $.ajax({
             type: "get",
@@ -120,15 +137,6 @@ $(function () {
             dataType: "image/svg+xml",
             success: function (response) {
                 $(".credit-cards-icon").append(response);
-            }
-        });
-        $.ajax({
-            type: "get",
-            url: "../res/svg/document.svg",
-            data: "",
-            dataType: "image/svg+xml",
-            success: function (response) {
-                $(".bank-account-icon").append(response);
             }
         });
         $.ajax({
