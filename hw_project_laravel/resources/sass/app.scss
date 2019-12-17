@@ -1,0 +1,296 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&display=swap');
+
+// Variables
+@import 'variables';
+@import "fonts";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+*{
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+html{
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    min-height: 100vh;
+    max-height: 100vh;
+    font-family: 'Dosis', sans-serif;
+}
+.flex-container{
+    display: flex;
+}
+
+.flex-container-col{
+    display:flex;
+    flex-direction: column;
+}
+
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+
+
+nav{
+    flex: 1 1;
+    max-height: 100vh;
+    background-color: #EDEFF8;
+    display: flex;
+    align-items: center;
+}
+
+.nav-collapse-button{
+    font-size: 3em;
+    background-color: transparent;
+    border: none;
+    text-align: start;
+    margin: 10px;
+    color: #597ffd;
+}
+
+.nav-links-container{
+    width: -moz-available;
+    width: available;
+}
+
+.nav-links-container > a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #B9C1CF;
+    padding: 2.5vh 2vw;
+}
+
+.current-nav-link{
+    color: #50667B !important;
+    background-color: #F4F5FA;
+    cursor: default;
+}
+
+.nav-links-container > a:hover{
+    color: #597ffd;
+}
+
+
+.b-t{
+    flex: 6 6;
+    max-height: 100vh;
+    padding: 2vh 2vw;
+}
+
+.b-t-method-icon{
+    color: #4F667C;
+}
+
+
+.b-t-name{
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.b-t-blnc{
+    color: #707070;
+    font-size: 0.9em;
+}
+
+.b-t-header{
+    align-items: center;
+}
+.b-t-collapse{
+    margin: 0 8vw !important;
+    margin-left: auto !important;
+    color: #50667B;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.b-t-add-trnsctn{
+    float: right;
+    margin-left: auto;
+    color: #50667B;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.b-t-collapse:hover, .b-t-add-trnsctn:hover{
+    color: #597ffd;
+}
+
+.b-t-header > *{
+    margin: 1vh 2vw;
+}
+td, th{
+    padding: 5px;
+}
+table{
+    border-collapse: collapse;
+}
+.b-t-table-expense{
+    color: rgb(223, 99, 99);
+}
+
+.b-t-table-income{
+    color: rgb(106, 185, 82);
+}
+
+.payment-method-delete{
+    position: relative;
+    float: right;
+    right: 1em;
+    text-decoration: none;
+    //font-size: 1.5em;
+    top: -5px;
+    button{
+        background-color: transparent;
+        border:none;
+        color: #ff000042;
+        transition: 0.3s;
+        &:hover{
+            color:red;
+            text-decoration: none;
+        }
+    }
+}
+.payment-method-icon{
+    padding-left: 1vh;
+    color: #B9C1CF;
+}
+.payment-methods-section{
+    flex-wrap: wrap;
+}
+
+.payment-method-icons-container{
+    padding-top: 10px;
+}
+.payment-methods-add-button{
+    border: none;
+    background-color: transparent;
+    color: #B9C1CF;
+}
+.payment-methods-add-button:hover{
+    color: #50667B !important;
+}
+
+.modal-custom {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    //height: 100vh; /* Full height */
+    overflow: hidden; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content-custom {
+    background-color: white;
+    margin: 15% auto; /* 15% from the top and centered */
+    width: 50%;
+    border: 2px #50667B solid;
+    padding: 5vh 2vw;
+    border-radius: 0.3vw;
+}
+
+.modal-title-custom{
+    line-height: normal !important;
+    padding: 3px 3vw;
+    border-bottom: 1px #50667B solid;
+}
+
+.input-group-custom{
+    margin: 1vh 0;
+    *{
+        margin: 0 0.5vw;
+    }
+    .input-group-text-custom{
+        font-size: large;
+    }
+    .input-group-input-custom{
+        border:none;
+        border-bottom: #50667B 1px solid;
+        padding: 2px 3px;
+        transition: 0.5s;
+        &:focus{
+            border-bottom: #A900FF 1px solid;
+        }
+    }
+    .payment-method-add-input-select{
+        padding: 2px 3px;
+    }
+}
+
+.submit-button-custom{
+    margin-top: 10px;
+    background-color: transparent;
+    padding: 0.3vh 1vw;
+    border: 1px #A900FF solid;
+    border-radius: 0.5vw;
+    color: #A900FF;
+    transition: 0.3s;
+    &:hover{
+        color: white;
+        background-color: #A900FF;
+    }
+}
+
+.is-invalid-custom{
+    border-bottom: red 1px solid;
+}
+
+.add-transaction-modal-open{
+    border: none;
+    background-color: transparent;
+}
+
+#home_add_transaction_modal{
+    div{
+        margin-top: 6%;
+    }
+}
+
+div[id^='statistics-container-']{
+    margin-top: 10px;
+    height: 40vh;
+    width: auto;
+}
+
+.canvasjs-chart-container{
+    overflow-x: visible;
+}
+.nav-hide-show{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+    .nav-hide-show{
+        display: block;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 1vh;
+        left: 1vw;
+        font-size: 2em;
+    }
+
+
+    *{
+        font-size: 0.7rem;
+        overflow-x: visible;
+    }
+    .modal-content-custom{
+        margin: 0;
+        margin: 35% 0;
+        width: 100%;
+    }
+
+}
